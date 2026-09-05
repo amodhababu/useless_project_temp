@@ -1,1 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>CAPTCHA University</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Fredoka:wght@400;500;600;700&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FLOATING DOODLES -->
+    <div class="doodles" id="doodles"></div>
+
+    <!-- TOP NAV -->
+    <header class="topbar">
+
+        <div class="mini-logo">
+            <span>◉</span>
+            CAPTCHA
+        </div>
+
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            HUMANITY TEST ONLINE
+        </div>
+
+        <div class="top-icons">
+            <span>✦</span>
+            <span>☻</span>
+            <span>⚡</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main id="homeScreen" class="screen active">
+
+        <div class="hero">
+
+            <div class="sticker sticker-one">100% REAL*</div>
+            <div class="sticker sticker-two">NO ROBOTS</div>
+
+            <div class="pixel-crown">👑</div>
+
+            <div class="title-wrapper">
+
+                <div class="tiny-title">
+                    THE COMPLETELY UNNECESSARY
+                </div>
+
+                <h1 class="main-title">
+                    CAPTCHA
+                    <span>UNIVERSITY</span>
+                </h1>
+
+                <div class="title-sub">
+                    🎓 School of Advanced Human Verification 🎓
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="card-tape"></div>
+
+                <div class="warning-line">
+                    ⚠️ OFFICIAL HUMANITY EXAMINATION ⚠️
+                </div>
+
+                <h2>Welcome, suspicious person.</h2>
+
+                <p>
+                    You have been selected for the world's least necessary
+                    test of humanity.
+                </p>
+
+                <div class="mini-stats">
+
+                    <div>
+                        <strong>12</strong>
+                        <small>CHALLENGES</small>
+                    </div>
+
+                    <div>
+                        <strong>80%</strong>
+                        <small>PASS MARK</small>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <small>CONFUSION</small>
+                    </div>
+
+                </div>
+
+                <button class="big-button" onclick="showInstructions()">
+                    <span>START HUMANITY TEST</span>
+                    <b>→</b>
+                </button>
+
+                <div class="tiny-note">
+                    *Results are scientifically questionable.
+                </div>
+
+            </div>
+
+
+            <!-- DEMO CERTIFICATE -->
+
+            <section class="demo-section">
+
+                <div class="section-label">
+                    ✦ BEFORE YOU BEGIN ✦
+                </div>
+
+                <h2>See what you could win.</h2>
+
+                <p class="demo-description">
+                    Pass the test and receive an unnecessarily official
+                    Certificate of Humanity.
+                </p>
+
+                <div class="certificate demo-certificate">
+
+                    <div class="cert-corner tl">✦</div>
+                    <div class="cert-corner tr">✦</div>
+                    <div class="cert-corner bl">✦</div>
+                    <div class="cert-corner br">✦</div>
+
+                    <div class="cert-top">
+                        CERTIFIED
+                    </div>
+
+                    <div class="cert-title">
+                        CERTIFICATE
+                    </div>
+
+                    <div class="cert-subtitle">
+                        OF HUMANITY
+                    </div>
+
+                    <div class="robot-seal">
+                        🤖
+                        <span>NOT A ROBOT</span>
+                    </div>
+
+                    <p class="cert-text">
+                        This document proudly certifies that
+                    </p>
+
+                    <div class="demo-name">
+                        SOME VERY HUMAN PERSON
+                    </div>
+
+                    <p class="cert-text">
+                        has successfully survived the CAPTCHA University
+                        Humanity Verification Examination.
+                    </p>
+
+                    <div class="certificate-grid">
+
+                        <div>
+                            <b>HUMANITY</b>
+                            <span>98.7%</span>
+                        </div>
+
+                        <div>
+                            <b>ROBOTIC SUSPICION</b>
+                            <span>1.3%</span>
+                        </div>
+
+                        <div>
+                            <b>STATUS</b>
+                            <span>HUMAN™</span>
+                        </div>
+
+                    </div>
+
+                    <div class="cert-bottom">
+
+                        <div class="fake-signature">
+                            Prof. Definitely Real
+                            <small>Dean of Human Things</small>
+                        </div>
+
+                        <div class="cert-stamp">
+                            APPROVED
+                            <small>PROBABLY</small>
+                        </div>
+
+                        <div class="barcode">
+                            || ||| | |||| || | |||
+                        </div>
+
+                    </div>
+
+                    <div class="cert-doodle">
+                        ★ ← do not photocopy
+                    </div>
+
+                    <div class="cert-date">
+                        VALID UNTIL ROBOTS TAKE OVER
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= INSTRUCTIONS ================= -->
+
+    <main id="instructionsScreen" class="screen">
+
+        <div class="paper-card">
+
+            <div class="paper-title">
+                📋 BEFORE YOU ENTER THE UNIVERSITY
+            </div>
+
+            <h1>
+                PLEASE READ THIS.
+            </h1>
+
+            <p class="handwritten">
+                Yes, actually read it. We know what you normally do.
+            </p>
+
+            <div class="instruction-grid">
+
+                <div class="instruction-box">
+                    <span>🎯</span>
+                    <h3>Your Mission</h3>
+                    <p>
+                        Complete 12 completely legitimate and totally
+                        scientifically accurate CAPTCHA challenges.
+                    </p>
+                </div>
+
+                <div class="instruction-box">
+                    <span>📊</span>
+                    <h3>Pass Mark</h3>
+                    <p>
+                        You need at least <b>80%</b> to receive your
+                        Certificate of Humanity.
+                    </p>
+                </div>
+
+                <div class="instruction-box">
+                    <span>🤖</span>
+                    <h3>Important</h3>
+                    <p>
+                        Some challenges are intentionally unfair.
+                        This is not a bug. It is the university.
+                    </p>
+                </div>
+
+                <div class="instruction-box">
+                    <span>🔊</span>
+                    <h3>Sound</h3>
+                    <p>
+                        Sound effects may occur during the test.
+                        Turn your volume up for maximum nonsense.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="rules">
+
+                <h3>⚠️ OFFICIAL RULES</h3>
+
+                <ul>
+                    <li>No cheating.</li>
+                    <li>No asking your friends.</li>
+                    <li>No blaming the university.</li>
+                    <li>Read the questions carefully.</li>
+                    <li>Do not trust buttons.</li>
+                    <li>Definitely do not trust robots.</li>
+                </ul>
+
+            </div>
+
+            <button class="big-button" onclick="showHumanQuestion()">
+                I HAVE READ EVERYTHING
+                <b>→</b>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= WHY HUMAN ================= -->
+
+    <main id="humanQuestionScreen" class="screen">
+
+        <div class="human-question">
+
+            <div class="floating-question-mark">?</div>
+
+            <div class="question-eyebrow">
+                FINAL PRE-ADMISSION QUESTION
+            </div>
+
+            <h1>
+                Why do you doubt<br>
+                <span>you are a human?</span>
+            </h1>
+
+            <p>
+                Before entering CAPTCHA University,
+                we need to know what brought you here.
+            </p>
+
+            <div class="thought-bubbles">
+                <span>🧠</span>
+                <span>👽</span>
+                <span>🤔</span>
+                <span>🤖</span>
+                <span>💭</span>
+            </div>
+
+            <textarea
+                id="humanReason"
+                placeholder="Tell us your completely unnecessary reason..."
+            ></textarea>
+
+            <button class="big-button" onclick="startGame()">
+                ENTER THE UNIVERSITY
+                <b>🎓</b>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= GAME ================= -->
+
+    <main id="gameScreen" class="screen">
+
+        <div class="game-header">
+
+            <div>
+                <span class="game-small">CAPTCHA UNIVERSITY</span>
+                <h2 id="questionNumber">QUESTION 01 / 12</h2>
+            </div>
+
+            <div class="score-box">
+                <span>SCORE</span>
+                <strong id="scoreDisplay">0%</strong>
+            </div>
+
+        </div>
+
+        <div class="progress-wrapper">
+            <div id="progressBar"></div>
+        </div>
+
+        <div id="questionContainer" class="question-container">
+            <!-- JS inserts questions -->
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+    </main>
+
+
+    <!-- ================= RESULT ================= -->
+
+    <main id="resultScreen" class="screen">
+
+        <div id="resultContent"></div>
+
+    </main>
+
+
+    <!-- ================= CERTIFICATE ================= -->
+
+    <main id="certificateScreen" class="screen">
+
+        <div class="certificate-page">
+
+            <div class="certificate-actions">
+
+                <button onclick="printCertificate()">
+                    🖨️ PRINT CERTIFICATE
+                </button>
+
+                <button onclick="location.reload()">
+                    ↻ TAKE TEST AGAIN
+                </button>
+
+            </div>
+
+            <div id="finalCertificate" class="certificate final-certificate">
+                <!-- JS creates certificate -->
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- AUDIO -->
+    <audio id="successSound"></audio>
+    <audio id="failSound"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

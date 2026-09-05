@@ -1,0 +1,1183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ink: #171329;
+    --cream: #fff9ed;
+    --pink: #ff5ca8;
+    --yellow: #ffd84d;
+    --blue: #67d9ff;
+    --purple: #8d68ff;
+    --green: #70e6a1;
+    --orange: #ff9c4a;
+    --red: #ff4e68;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 20%, #ffd5e9 0 7%, transparent 8%),
+        radial-gradient(circle at 90% 80%, #ccefff 0 8%, transparent 9%),
+        linear-gradient(135deg, #fff5d9, #f5eaff 45%, #dff8ff);
+    color: var(--ink);
+    font-family: "Fredoka", sans-serif;
+    overflow-x: hidden;
+}
+
+button,
+textarea,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.screen {
+    display: none;
+    min-height: calc(100vh - 70px);
+    padding: 40px 20px 80px;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    border-bottom: 3px solid var(--ink);
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.mini-logo {
+    font-family: "Press Start 2P";
+    font-size: 11px;
+}
+
+.mini-logo span {
+    color: var(--pink);
+}
+
+.status-pill {
+    border: 2px solid var(--ink);
+    border-radius: 30px;
+    padding: 9px 16px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 4px 4px 0 var(--ink);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #42df75;
+    border-radius: 50%;
+    margin-right: 7px;
+    animation: blink 1s infinite;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+}
+
+
+/* ================= FLOATING DOODLES ================= */
+
+.doodles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.doodle {
+    position: absolute;
+    font-size: 25px;
+    animation: floatAround linear infinite;
+    opacity: .7;
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-120px) rotate(360deg);
+    }
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1150px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.title-wrapper {
+    text-align: center;
+    margin: 35px auto;
+}
+
+.tiny-title {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-family: "Bangers";
+    font-size: clamp(70px, 12vw, 145px);
+    line-height: .72;
+    letter-spacing: 5px;
+    text-shadow:
+        5px 5px 0 var(--pink),
+        9px 9px 0 var(--ink);
+    transform: rotate(-2deg);
+}
+
+.main-title span {
+    display: block;
+    color: var(--yellow);
+    -webkit-text-stroke: 3px var(--ink);
+}
+
+.title-sub {
+    margin-top: 30px;
+    font-family: "Permanent Marker";
+    font-size: 18px;
+    transform: rotate(1deg);
+}
+
+
+/* STICKERS */
+
+.sticker {
+    position: absolute;
+    padding: 13px;
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    font-family: "Bangers";
+    letter-spacing: 1px;
+}
+
+.sticker-one {
+    background: var(--yellow);
+    top: 70px;
+    left: 30px;
+    transform: rotate(-10deg);
+}
+
+.sticker-two {
+    background: var(--pink);
+    color: white;
+    right: 30px;
+    top: 150px;
+    transform: rotate(8deg);
+}
+
+.pixel-crown {
+    position: absolute;
+    font-size: 55px;
+    right: 150px;
+    top: 40px;
+    animation: bob 2s infinite ease-in-out;
+}
+
+@keyframes bob {
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    max-width: 700px;
+    margin: 65px auto;
+    background: var(--cream);
+    border: 4px solid var(--ink);
+    padding: 45px;
+    box-shadow: 12px 12px 0 var(--ink);
+    position: relative;
+    transform: rotate(.5deg);
+}
+
+.card-tape {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background: rgba(255, 214, 79, .8);
+    top: -15px;
+    left: 40%;
+    transform: rotate(-3deg);
+}
+
+.warning-line {
+    font-family: "Press Start 2P";
+    font-size: 8px;
+    margin-bottom: 25px;
+    color: var(--red);
+}
+
+.hero-card h2 {
+    font-family: "Bangers";
+    font-size: 42px;
+}
+
+.hero-card p {
+    font-size: 18px;
+    margin: 12px 0 30px;
+}
+
+.mini-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.mini-stats div {
+    border: 3px solid var(--ink);
+    padding: 15px;
+    text-align: center;
+    background: white;
+}
+
+.mini-stats strong {
+    display: block;
+    font-family: "Bangers";
+    font-size: 30px;
+}
+
+.mini-stats small {
+    font-family: "Press Start 2P";
+    font-size: 7px;
+}
+
+.big-button {
+    width: 100%;
+    padding: 20px 25px;
+    border: 4px solid var(--ink);
+    background: var(--pink);
+    color: white;
+    font-family: "Bangers";
+    font-size: 26px;
+    letter-spacing: 1px;
+    box-shadow: 7px 7px 0 var(--ink);
+    transition: .15s;
+}
+
+.big-button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 3px 3px 0 var(--ink);
+}
+
+.big-button b {
+    float: right;
+}
+
+.tiny-note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 11px;
+}
+
+
+/* ================= DEMO CERTIFICATE ================= */
+
+.demo-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.section-label {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+}
+
+.demo-section h2 {
+    font-family: "Bangers";
+    font-size: 55px;
+    margin: 12px;
+}
+
+.demo-description {
+    margin-bottom: 30px;
+}
+
+.certificate {
+    background:
+        radial-gradient(circle at 20% 20%, #f5d78c 0 1%, transparent 1.5%),
+        #fff3c9;
+    border: 12px double #8b172c;
+    position: relative;
+    color: #341523;
+    overflow: hidden;
+}
+
+.demo-certificate {
+    max-width: 900px;
+    margin: auto;
+    padding: 55px;
+    box-shadow: 12px 12px 0 var(--ink);
+}
+
+.cert-corner {
+    position: absolute;
+    font-size: 30px;
+}
+
+.tl { top: 12px; left: 20px; }
+.tr { top: 12px; right: 20px; }
+.bl { bottom: 12px; left: 20px; }
+.br { bottom: 12px; right: 20px; }
+
+.cert-top {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+}
+
+.cert-title {
+    font-family: "Bangers";
+    font-size: 75px;
+    line-height: .8;
+    margin-top: 20px;
+}
+
+.cert-subtitle {
+    font-family: "Permanent Marker";
+    font-size: 28px;
+}
+
+.robot-seal {
+    margin: 25px auto;
+    border: 4px solid #8b172c;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    transform: rotate(-8deg);
+}
+
+.robot-seal span {
+    font-family: "Press Start 2P";
+    font-size: 6px;
+}
+
+.cert-text {
+    margin: 15px auto;
+}
+
+.demo-name {
+    font-family: "Permanent Marker";
+    font-size: 28px;
+    border-bottom: 2px dashed #8b172c;
+    display: inline-block;
+    padding: 5px 40px;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0;
+    border: 2px solid #8b172c;
+}
+
+.certificate-grid div {
+    padding: 15px;
+    border-right: 2px solid #8b172c;
+}
+
+.certificate-grid div:last-child {
+    border-right: none;
+}
+
+.certificate-grid b,
+.certificate-grid span {
+    display: block;
+}
+
+.certificate-grid b {
+    font-size: 8px;
+}
+
+.certificate-grid span {
+    font-family: "Bangers";
+    font-size: 24px;
+}
+
+.cert-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.fake-signature {
+    font-family: "Permanent Marker";
+    font-size: 18px;
+}
+
+.fake-signature small {
+    display: block;
+    font-family: "Fredoka";
+    font-size: 9px;
+}
+
+.cert-stamp {
+    border: 4px solid #8b172c;
+    border-radius: 50%;
+    padding: 15px;
+    font-family: "Bangers";
+    transform: rotate(-12deg);
+}
+
+.cert-stamp small {
+    display: block;
+    font-family: "Press Start 2P";
+    font-size: 6px;
+}
+
+.barcode {
+    font-family: monospace;
+    letter-spacing: 3px;
+}
+
+.cert-doodle {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    font-family: "Permanent Marker";
+    transform: rotate(8deg);
+}
+
+.cert-date {
+    margin-top: 30px;
+    font-family: "Press Start 2P";
+    font-size: 7px;
+}
+
+
+/* ================= INSTRUCTIONS ================= */
+
+.paper-card {
+    max-width: 850px;
+    margin: auto;
+    background: #fffef6;
+    border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--purple);
+    padding: 50px;
+    position: relative;
+}
+
+.paper-title {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    margin-bottom: 25px;
+}
+
+.paper-card h1 {
+    font-family: "Bangers";
+    font-size: 65px;
+}
+
+.handwritten {
+    font-family: "Permanent Marker";
+    transform: rotate(-2deg);
+    margin: 15px 0 35px;
+}
+
+.instruction-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.instruction-box {
+    padding: 20px;
+    border: 3px solid var(--ink);
+    background: #fff;
+}
+
+.instruction-box:nth-child(1) {
+    transform: rotate(-1deg);
+    background: #ffdff0;
+}
+
+.instruction-box:nth-child(2) {
+    transform: rotate(1deg);
+    background: #e0f7ff;
+}
+
+.instruction-box:nth-child(3) {
+    transform: rotate(1deg);
+    background: #fff0bd;
+}
+
+.instruction-box:nth-child(4) {
+    transform: rotate(-1deg);
+    background: #ddf8df;
+}
+
+.instruction-box span {
+    font-size: 30px;
+}
+
+.instruction-box h3 {
+    font-family: "Bangers";
+    font-size: 28px;
+}
+
+.rules {
+    margin: 30px 0;
+    padding: 25px;
+    border: 3px dashed var(--red);
+    background: #fff4f0;
+}
+
+.rules h3 {
+    font-family: "Bangers";
+    font-size: 28px;
+}
+
+.rules li {
+    margin: 8px 0;
+}
+
+
+/* ================= HUMAN QUESTION ================= */
+
+.human-question {
+    max-width: 800px;
+    margin: 70px auto;
+    text-align: center;
+    position: relative;
+}
+
+.question-eyebrow {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    margin-bottom: 30px;
+}
+
+.human-question h1 {
+    font-family: "Bangers";
+    font-size: clamp(60px, 9vw, 100px);
+    line-height: .85;
+    transform: rotate(-2deg);
+}
+
+.human-question h1 span {
+    color: var(--pink);
+    text-shadow: 4px 4px 0 var(--ink);
+}
+
+.human-question p {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.thought-bubbles {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 38px;
+    margin: 30px;
+}
+
+.thought-bubbles span {
+    animation: bob 1.5s infinite ease-in-out;
+}
+
+.thought-bubbles span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.thought-bubbles span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.human-question textarea {
+    width: 100%;
+    height: 130px;
+    border: 4px solid var(--ink);
+    padding: 20px;
+    resize: none;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 7px 7px 0 var(--ink);
+    margin-bottom: 25px;
+}
+
+
+/* ================= GAME ================= */
+
+.game-header {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-small {
+    font-family: "Press Start 2P";
+    font-size: 8px;
+}
+
+.game-header h2 {
+    font-family: "Bangers";
+    font-size: 35px;
+}
+
+.score-box {
+    border: 3px solid var(--ink);
+    padding: 10px 20px;
+    background: var(--yellow);
+    text-align: center;
+    transform: rotate(3deg);
+}
+
+.score-box span {
+    display: block;
+    font-family: "Press Start 2P";
+    font-size: 7px;
+}
+
+.score-box strong {
+    font-family: "Bangers";
+    font-size: 30px;
+}
+
+.progress-wrapper {
+    max-width: 1000px;
+    height: 15px;
+    background: white;
+    border: 3px solid var(--ink);
+    margin: 20px auto 35px;
+}
+
+#progressBar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+    transition: width .4s;
+}
+
+.question-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.question-card {
+    background: rgba(255,255,255,.9);
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--ink);
+    padding: 40px;
+}
+
+.question-tag {
+    font-family: "Press Start 2P";
+    font-size: 8px;
+    color: var(--purple);
+}
+
+.question-title {
+    font-family: "Bangers";
+    font-size: 50px;
+    margin: 12px 0;
+}
+
+.question-description {
+    margin-bottom: 25px;
+}
+
+
+/* TRAFFIC LIGHTS */
+
+.traffic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.traffic-item {
+    border: 3px solid var(--ink);
+    background: #fff;
+    padding: 20px;
+    font-size: 55px;
+    text-align: center;
+    transition: .15s;
+}
+
+.traffic-item:hover {
+    transform: rotate(3deg) scale(1.03);
+}
+
+.traffic-item.selected {
+    background: var(--yellow);
+    box-shadow: inset 0 0 0 5px var(--pink);
+}
+
+
+/* ANSWER BUTTONS */
+
+.answer-button {
+    width: 100%;
+    padding: 16px;
+    border: 3px solid var(--ink);
+    background: white;
+    margin: 7px 0;
+    text-align: left;
+    font-size: 17px;
+    transition: .15s;
+}
+
+.answer-button:hover {
+    background: #ffe1ee;
+    transform: translateX(5px);
+}
+
+
+/* DISTORTED WORD */
+
+.distorted-word {
+    font-family: "Bangers";
+    font-size: 65px;
+    letter-spacing: 10px;
+    text-align: center;
+    transform: rotate(-3deg) skew(8deg);
+    animation: wiggle .25s infinite alternate;
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotate(-3deg) skew(8deg);
+    }
+
+    to {
+        transform: rotate(3deg) skew(-8deg);
+    }
+}
+
+.text-answer {
+    width: 100%;
+    padding: 17px;
+    border: 3px solid var(--ink);
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+
+/* CANVAS */
+
+.canvas-wrap {
+    border: 4px dashed var(--purple);
+    background: white;
+    max-width: 500px;
+    margin: auto;
+}
+
+#circleCanvas {
+    width: 100%;
+    height: 350px;
+    display: block;
+    touch-action: none;
+}
+
+
+/* MIC */
+
+.mic-area {
+    text-align: center;
+    padding: 30px;
+}
+
+.mic-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--ink);
+    background: var(--pink);
+    font-size: 45px;
+    box-shadow: 7px 7px 0 var(--ink);
+}
+
+.mic-button.recording {
+    animation: pulse 1s infinite;
+    background: var(--red);
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* VANISHING */
+
+.vanish-code {
+    font-family: "Press Start 2P";
+    font-size: 40px;
+    padding: 30px;
+    background: #171329;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* DODGE */
+
+.dodge-area {
+    height: 300px;
+    position: relative;
+    border: 3px dashed var(--pink);
+    background: #fff7fb;
+    overflow: hidden;
+}
+
+#dodgeButton {
+    position: absolute;
+    padding: 16px 30px;
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    font-family: "Bangers";
+    font-size: 22px;
+}
+
+
+/* MOLES */
+
+.mole-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.mole {
+    height: 90px;
+    border: 3px solid var(--ink);
+    background: #e9ddff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+/* TERMS */
+
+.terms-box {
+    height: 230px;
+    overflow-y: scroll;
+    border: 3px solid var(--ink);
+    padding: 20px;
+    background: #fafafa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.hidden-checkbox {
+    margin: 15px;
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #aaa;
+    position: relative;
+}
+
+.swapped-area {
+    position: relative;
+    height: 250px;
+    border: 3px dashed var(--blue);
+}
+
+.fake-robot-check {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 12px;
+    background: white;
+    border: 2px solid #bbb;
+}
+
+.real-human-check {
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    font-size: 8px;
+    color: #aaa;
+}
+
+
+/* FEEDBACK */
+
+.feedback {
+    max-width: 850px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: "Bangers";
+    font-size: 35px;
+    min-height: 45px;
+}
+
+.feedback.correct {
+    color: #159447;
+    animation: pop .3s;
+}
+
+.feedback.wrong {
+    color: var(--red);
+    animation: shake .3s;
+}
+
+@keyframes pop {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shake {
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+
+/* ================= RESULT ================= */
+
+.result-card {
+    max-width: 850px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 60px 40px;
+    border: 5px solid var(--ink);
+    background: white;
+    box-shadow: 15px 15px 0 var(--ink);
+}
+
+.result-card h1 {
+    font-family: "Bangers";
+    font-size: clamp(70px, 12vw, 120px);
+}
+
+.result-card.robot h1 {
+    color: var(--red);
+    text-shadow: 5px 5px 0 #ffb4c0;
+}
+
+.result-card.human h1 {
+    color: var(--purple);
+    text-shadow: 5px 5px 0 var(--yellow);
+}
+
+.robot-art {
+    font-size: 70px;
+    margin: 20px;
+}
+
+.pixel-art {
+    font-family: monospace;
+    white-space: pre;
+    line-height: .8;
+    font-size: 12px;
+    margin: 20px;
+}
+
+.result-score {
+    font-family: "Press Start 2P";
+    font-size: 13px;
+    margin: 20px;
+}
+
+.result-message {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.review {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.review-item {
+    border: 2px solid var(--ink);
+    padding: 14px;
+    margin: 8px 0;
+    background: #fff;
+}
+
+.review-item.correct {
+    border-left: 8px solid #32bd69;
+}
+
+.review-item.wrong {
+    border-left: 8px solid var(--red);
+}
+
+
+/* ================= CERTIFICATE PAGE ================= */
+
+.certificate-page {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.certificate-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.certificate-actions button {
+    padding: 15px 20px;
+    border: 3px solid var(--ink);
+    background: var(--yellow);
+    font-family: "Bangers";
+    font-size: 20px;
+}
+
+.final-certificate {
+    padding: 70px;
+    min-height: 650px;
+}
+
+.name-input {
+    width: 80%;
+    max-width: 600px;
+    padding: 18px;
+    border: 3px solid var(--ink);
+    font-family: "Permanent Marker";
+    font-size: 22px;
+    margin: 20px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .status-pill {
+        display: none;
+    }
+
+    .main-title {
+        font-size: 70px;
+    }
+
+    .sticker {
+        display: none;
+    }
+
+    .hero-card,
+    .paper-card,
+    .question-card {
+        padding: 25px;
+    }
+
+    .mini-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .instruction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .traffic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-grid div {
+        border-right: none;
+        border-bottom: 2px solid #8b172c;
+    }
+
+    .cert-bottom {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .demo-certificate,
+    .final-certificate {
+        padding: 30px 20px;
+    }
+
+    .cert-title {
+        font-size: 55px;
+    }
+
+    .question-title {
+        font-size: 40px;
+    }
+
+    .mole-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .certificate-actions,
+    .topbar,
+    .doodles {
+        display: none !important;
+    }
+
+    .screen {
+        padding: 0;
+    }
+
+    .certificate-page {
+        max-width: none;
+    }
+
+    .final-certificate {
+        box-shadow: none;
+        width: 100%;
+    }
+}
