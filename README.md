@@ -150,14 +150,14 @@ Use Live Server because the microphone challenge works more reliably when the we
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1wXjc6qC2ecUhu8JT0FWvs7NUmybDkWkl/view?usp=sharing]
+intex html screenshots
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1ggGnBGKr5tUxTNsj9rpWJ4QRCq5dL5XU/view?usp=sharing]
+script js screenshots
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1FX0-iICyYBICU4-QdeQf7F4LwK8IWRYd/view?usp=sharing]
+style css screenshots
 
 # Diagrams
 The application follows a simple verification workflow:
