@@ -2,45 +2,147 @@
 
 
 
-# [Project Name] 🎯
+# [CAPTCHA UNIVERSITY] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [Why Not]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: [AMODH A BABU] - [SCMS SCHOOL OF ENGINEERING AND TECHNOLOGY]
+- Member 2: [AMRITHA M R] - [SCMS SCHOOL OF ENGINEERING AND TECHNOLOGY]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+CAPTCHA UNIVERSITY is a completely unnecessary but highly entertaining human-verification system designed to answer one extremely important question:
+
+"Are you actually human?" 🤨
+
+Instead of using ordinary CAPTCHAs, the system puts users through a series of increasingly ridiculous challenges involving impossible CAPTCHAs, disappearing text, dodging buttons, circle drawing, microphone challenges, suspicious equations, emotional questions and more.
+
+Survive the verification process, score at least 80%, and you receive a completely unnecessary Certificate of Humanity. 🏆
+
+Fail the test...
+
+You might be a robot. 🤖
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+In today's world, nobody can be completely sure whether the person using a computer is actually human.
+
+Traditional CAPTCHAs such as:
+
+"Select all the traffic lights."
+
+are simply too reasonable.
+
+Therefore, we identified a serious problem:
+
+How can we make proving that you are human unnecessarily difficult, confusing and entertaining?
+
+Nobody asked this question.
+
+We answered it anyway.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+The Solution (that nobody asked for)
+
+We created CAPTCHA UNIVERSITY, an absurd human-verification experience where users must complete a collection of ridiculous challenges.
+
+The system progressively increases the difficulty and randomness of the challenges.
+
+Users may be asked to:
+
+Select obviously incorrect traffic lights 🚦
+Read a distorted word
+Draw a supposedly perfect circle
+Hum a tune that the system isn't actually listening to 🎤
+Solve an equation that isn't really mathematics
+Prove that they have feelings ❤️
+Remember text that disappears almost instantly
+Catch a button that actively runs away
+Solve an equation that mathematically makes no sense
+Whack bald moles while avoiding the ones wearing hats
+Prove that they are a robot
+Find a hidden checkbox
+Avoid clicking the suspicious "I am a robot" checkbox
+
+After completing the challenges, the system calculates the user's score.
+
+If the score is 80% or higher:
+
+🎉 HUMAN VERIFIED
+
+The user receives a completely official-looking:
+
+🏆 CERTIFICATE OF HUMANITY
+
+If the score is below 80%:
+
+🤖 ROBOT DETECTED
+
+No certificate.
+
+No sympathy.
+
+Maybe.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+HTML5 — Structure of the web application
+CSS3 — Styling, animations, responsive interface and visual effects
+JavaScript — Game logic, scoring system, challenges and interactions
+Canvas API — Used for the circle-drawing CAPTCHA
+Web Audio API — Used for sound effects
+MediaRecorder API — Used for the microphone/humming challenge
+Browser APIs — Used for interaction, timers and user input
+Google Fonts — Aesthetic and handwritten-style typography
+VS Code — Development environment
+Git & GitHub — Version control and project hosting
+Live Server — Local development and testing
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+For Hardware
+
+- No dedicated hardware is required.
+
+The project runs completely inside a web browser.
+
+Minimum requirements:
+
+Computer / laptop / smartphone
+Display
+Mouse or touchscreen
+Keyboard
+Microphone for the humming challenge
+Modern web browser
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+Clone the repository:
 
+git clone <YOUR-GITHUB-REPOSITORY-LINK>
+
+Navigate into the project folder:
+
+cd captcha-university
+
+No additional packages or dependencies are required.
+
+Run
+
+Open the project using VS Code and run index.html using Live Server.
+
+Alternatively, open:
+
+index.html
+
+directly in a modern web browser.
+
+Recommended
+
+Use Live Server because the microphone challenge works more reliably when the website is running through a local server.
 # Run
 [commands]
 
@@ -58,40 +160,48 @@ For Software:
 *Add caption explaining what this shows*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+The application follows a simple verification workflow:
 
-For Hardware:
+START
+  ↓
+Welcome Screen
+  ↓
+View Demo Certificate
+  ↓
+Start Verification
+  ↓
+"WHY DO YOU DOUBT YOU ARE A HUMAN??????"
+  ↓
+CAPTCHA Challenges
+  ↓
+Challenge 1
+  ↓
+Challenge 2
+  ↓
+Challenge 3
+  ↓
+...
+  ↓
+Challenge 13
+  ↓
+Calculate Score
+  ↓
+ ┌───────────────┐
+ │ Score ≥ 80%?  │
+ └───────┬───────┘
+         │
+     ┌───┴───┐
+     ↓       ↓
+   YES       NO
+    ↓         ↓
+ HUMAN      ROBOT
+ VERIFIED   DETECTED
+    ↓         ↓
+Certificate  Review
+    ↓
+  Print
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
