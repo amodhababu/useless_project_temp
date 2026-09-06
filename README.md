@@ -160,8 +160,9 @@ script js screenshots
 style css screenshots
 
 
-#Deploy link
-[https://amodhababu.github.io/useless_project_temp/]
+# Deploy link
+
+![https://useless-project-temp-nu-woad.vercel.app/]
 
 # Diagrams
 The application follows a simple verification workflow:
